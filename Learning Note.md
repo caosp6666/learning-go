@@ -234,3 +234,77 @@ slice原理
 
 
 导入包的命名
+
+
+
+
+
+### func
+
+注意传递的是指针还是值，多说情况下传递的应该是指针。
+
+
+
+
+
+### 结构体
+
+> go中没有类，需要使用结构体进行类的操作
+
+定义类方法就是把这个结构体作为函数定义的参数
+
+
+
+
+
+## 接口
+
+go中可以通过interface定义一种具有若干功能的接口。
+
+interface是一种类型。通过type定义
+
+```go
+type Abser interface {
+	Abs() float64
+	// 定义了一个Abser接口，这个接口类型的变量需要实现Abs()功能
+}
+```
+
+
+
+
+
+
+
+### import中的下划线
+
+https://www.cnblogs.com/hezhixiong/p/4588964.html
+
+总结：下划线只导入了这个包的init，无法通过包名来调用包中的其他函数。
+
+
+
+### 导入的目录问题
+
+在导入的时候，不用导入那个对应的文件，导入包即可，比如：在utils目录下有很多文件，其中一个wxpay.go中有一个func MakeMiniProgramUnifiedOrder
+
+```
+import (
+	"baogo/utils"
+)
+
+// 这时导入utils即可，不用导入utils/wxpay
+// 可以直接使用这个MakeMiniProgramUnifiedOrder
+```
+
+
+
+
+
+### go项目下生成的go.sum和go.mod
+
+在`go mod init package`的时候生成这两个文件。
+
+go.mod是记录了依赖包和版本
+
+go.sum是将下载的依赖包和版本进行
