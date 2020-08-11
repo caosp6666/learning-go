@@ -1,4 +1,31 @@
-gin.SetMode(gin.ReleaseMode) 发行模式
+
+## go概述
+
+### go适合干什么
+1. 区块链
+2. 服务器端 / 游戏后台
+3. 云计算 / 云服务
+
+
+### go的历史
+现有的语言系统没有充分利用多核，处理大并发的能力不够好
+
+c/c++运行速度虽然很快，但是编译速度很慢，还存在内存泄漏等问题。
+
+
+### go吉祥物
+金花鼠(gordon)
+
+### go特点
+既能达到静态语言的安全和性能，又达到了动态语言的开发维护效率。Go=C+python
+
+1. 引入包的概念，每个文件都要归属于一个package
+2. 垃圾回收机制，自动回收内存。
+3. 天然具有并发的能力
+4. 管道机制，通过chan进行goroutine的通信
+5. 切片，延迟执行(defer)
+6. 函数可以返回多个值
+
 
 
 
@@ -18,6 +45,21 @@ gin.SetMode(gin.ReleaseMode) 发行模式
 C:\Users\leishen>go env -w GO111MODULE=on
 C:\Users\leishen>go env -w GOPROXY=https://goproxy.cn,direct
 ```
+
+
+
+
+
+
+
+
+gin.SetMode(gin.ReleaseMode) 发行模式
+
+
+
+
+
+
 
 安装gin`go get -u github.com/gin-gonic/gin`
 
