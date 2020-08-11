@@ -49,39 +49,25 @@ C:\Users\leishen>go env -w GOPROXY=https://goproxy.cn,direct
 
 
 
+## go run 与 go build
+go build是生成.exe文件,这个文件可以在没有go环境的系统中运行,因此需要将很多依赖一起打包编译,生成的exe文件会比较大
+
+go run不用生成.exe文件,直接运行
 
 
 
+
+## gin
 
 gin.SetMode(gin.ReleaseMode) 发行模式
 
-
-
-
-
-
-
 安装gin`go get -u github.com/gin-gonic/gin`
-
-
-
-
-
-在进行`Go`语言开发的时候，我们的代码总是会保存在`$GOPATH/src`目录下。在工程经过`go build`、`go install`或`go get`等指令后，会将下载的第三方包源代码文件放在`$GOPATH/src`目录下， 产生的二进制可执行文件放在 `$GOPATH/bin`目录下，生成的中间缓存文件会被保存在 `$GOPATH/pkg` 下。
-
-
-
-
 
 
 
 ## 特性
 
 ### 变量必须声明并且声明后必须使用
-
-
-
-
 
 ### 下划线的使用
 
@@ -350,3 +336,9 @@ import (
 go.mod是记录了依赖包和版本
 
 go.sum是将下载的依赖包和版本进行
+
+
+
+## 基础语法
+
+### 转义字符: \
