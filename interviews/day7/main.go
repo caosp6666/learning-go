@@ -11,14 +11,16 @@ import "fmt"
 // }
 
 const (
-	x = iota
-	_
-	y
+	x, i = iota, iota
+	_, _
+	y, r
 	z = "zz"
 	k
 	p = iota
 )
 
+// 间断的相当于跟上面一样的定义，iota表示常量计数
+
 func main() {
-	fmt.Println(x, y, z, k, p)
+	fmt.Println(x, y, z, k, p, i, r)
 }
